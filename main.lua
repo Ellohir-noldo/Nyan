@@ -133,14 +133,18 @@ function love.update(dt)
     -- player movement controls
    if love.keyboard.isDown("right") then
       x = math.ceil(x + (speed * dt))
+      if x > 790 then x = 790 end
    elseif love.keyboard.isDown("left") then
       x = math.floor(x - (speed * dt))
+      if x < 0 then x = 0 end
    end
     
    if love.keyboard.isDown("down") then
       y = math.ceil(y + (speed/2 * dt))
+      if y > 600 then y = 600 end
    elseif love.keyboard.isDown("up") then
       y = math.floor(y - (speed/2 * dt))
+      if y < 0 then y = 0 end
    end   
    
 end
