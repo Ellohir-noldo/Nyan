@@ -152,13 +152,13 @@ end
 function love.draw()
     -- draw rainbows
    for i = 1, math.floor(x/16) + 1 do
-        love.graphics.drawq(rainbow, rainbowQ, i*16, bufy[i], 0,1,1)
+        love.graphics.drawq(rainbow, rainbowQ, (i -1)*16, bufy[i]-16, 0,1,1)
         --love.graphics.print(i*16, i*16, posy[i])
         --love.graphics.print(posy[i], i*16, posy[i]+16)
    end
       
    -- draw nyan cat
-   love.graphics.drawq(player_img, playerQ[player_sprite], x, y, 0,1,1)
+   love.graphics.drawq(player_img, playerQ[player_sprite], x-16, y-16, 0,1,1)
    --love.graphics.print(x.." "..y, x+20, y+40)
    
    -- draw nyan fireworks
